@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTaskActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/addtask_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:id="@+id/taskname"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/description"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:hint="Name of Task"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/date"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:maxLength="15"
+        android:hint="Description(max 5 words)"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/time"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="29dp"
+        android:layout_toStartOf="@+id/img_calendar"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="Date"
+        android:inputType="date" />
+
+    <ImageButton
+        android:id="@+id/img_calendar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_above="@+id/img_clock"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="51dp"
+        android:onClick="openCalendar"
+        app:srcCompat="@drawable/calender" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="175dp"
+        android:layout_toStartOf="@+id/img_clock"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="Time"
+        android:inputType="time" />
+
+    <ImageButton
+        android:id="@+id/img_clock"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="184dp"
+        android:onClick="openClock"
+        app:srcCompat="@drawable/clock" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="91dp"
+        android:onClick="save"
+        android:text="Save" />
+
+
+
+</RelativeLayout>
